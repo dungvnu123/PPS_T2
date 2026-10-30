@@ -1,5 +1,16 @@
 {
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
-    }
+    },
+    "notebook.lineNumbers": "on",
+    "notebook.editorOptionsCustomizations": {
+        "editor.fontSize": 16,
+        "editor.lineHeight": 26,
+        "editor.wordWrap": "on"
+    },
+    "notebook.markup.fontSize": 16,
+    "notebook.output.fontSize": 14,
+    "notebook.output.lineHeight": 22,
+    "notebook.output.wordWrap": true,
+    "notebook.compactView": false
 }
