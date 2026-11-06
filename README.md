@@ -2,6 +2,18 @@
 
 Bộ notebook giải hệ phương trình tuyến tính, hợp nhất từ các nhánh `DinhHieu`, `anth` và `TranLe`.
 
+## Thành viên và phân công nhiệm vụ
+
+| STT | MSSV | Họ và tên | Nhiệm vụ |
+| --- | --- | --- | --- |
+| 24 | 243030538 | Trần Quang Lê | Gauss–Seidel + Jacobi |
+| 25 | 243030513 | Nguyễn Nguyên Bình | Viết báo cáo + chỉnh code chéo trội |
+| 26 | 24302442 | Trần Anh Dũng | Tạo repo + README + Jacobi |
+| 27 | 243030546 | Phạm Tiến Phát | Slide + bài tập ứng dụng |
+| 28 | 243030531 | Nguyễn Hữu Khánh | Thuyết trình + bài tập ứng dụng |
+| 29 | 243030526 | Trần Đình Hiệu | Chéo trội |
+| 30 | 243030508 | Nguyễn Thành An | Gradient liên hợp |
+
 ## Các phần chương trình
 
 - `Gau-Jacobi/`: Jacobi và Gauss–Seidel. `Jacobi_v1.ipynb` và `gauss_seidel.ipynb` chạy theo số bước lặp; các bản `_v2` dừng theo sai số. Hai notebook `test_jacobi.ipynb`, `test_gauss_seidel.ipynb` chứa kiểm thử.
@@ -9,6 +21,8 @@ Bộ notebook giải hệ phương trình tuyến tính, hợp nhất từ các 
 - `Gradient-lien-hop/conjugate_gradient.ipynb`: phương pháp gradient liên hợp, tính định thức, ví dụ và kiểm thử của anth.
 
 Mỗi phần nằm trong thư mục riêng. Khi chạy notebook kiểm thử, dùng thư mục chứa notebook làm thư mục làm việc. Các thư viện pytest và ipytest đã có trong danh sách cài đặt bên dưới.
+
+File `pytest.ini` giữ cấu hình kiểm thử trong phạm vi dự án, tránh lấy nhầm cấu hình ở thư mục cha. Chạy kiểm thử bằng **Run All Cells** trong hai notebook kiểm thử; lệnh `pytest` thông thường không tự thu thập các bài kiểm thử trong file `.ipynb`.
 
 ## Môi trường
 
@@ -22,15 +36,19 @@ Mỗi phần nằm trong thư mục riêng. Khi chạy notebook kiểm thử, d�
 ```powershell
 git clone https://github.com/dungvnu123/PPS_T2.git
 cd PPS_T2
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
-.\.venv\Scripts\python.exe -m ipykernel install --sys-prefix --name pps-t2 --display-name "Python (PPS_T2)"
+powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
 .\.venv\Scripts\python.exe -m jupyterlab
 ```
 
 Mở notebook và chọn kernel **Python (PPS_T2)**, sau đó chọn **Run All Cells**. Trong VS Code, có thể chọn trực tiếp trình thông dịch `.venv\Scripts\python.exe`.
 
+Nếu đã tải hoặc clone dự án, mở PowerShell tại thư mục gốc và chạy hai lệnh cuối. Script `setup.ps1` tạo `.venv` bằng Python 3.11 (ưu tiên `py -3.11`, dự phòng `python`), cài thư viện từ `requirements-lock.txt`, kiểm tra phụ thuộc và đăng ký kernel trong môi trường dự án. Có thể chạy lại script để hoàn tất cài đặt nếu lần trước bị gián đoạn.
+
+Trong VS Code, cài các extension được đề xuất trong `.vscode/extensions.json` (**Python**, **Jupyter**). Cấu hình workspace mặc định dùng `.venv` và mở file `.ipynb` bằng Notebook editor. Nếu VS Code đã lưu một interpreter khác, dùng **Python: Select Interpreter** để chọn `.venv\Scripts\python.exe`, rồi chọn kernel tương ứng trong notebook.
+
 `requirements.txt` khai báo các thư viện trực tiếp. `requirements-lock.txt` ghi lại phiên bản toàn bộ thư viện đã cài và kiểm tra với Python 3.11 trên Windows. Thư mục `.venv` được tạo riêng trên từng máy và được bỏ qua khi đẩy lên Git.
+
+Dự án không cần file `.env` hay khóa API để chạy các notebook.
 
 ## Kiểm tra notebook
 
