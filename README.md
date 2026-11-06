@@ -8,7 +8,7 @@ Bộ notebook giải hệ phương trình tuyến tính, hợp nhất từ các 
 | --- | --- | --- | --- |
 | 24 | 243030538 | Trần Quang Lê | Gauss–Seidel + Jacobi |
 | 25 | 243030513 | Nguyễn Nguyên Bình | Viết báo cáo + chỉnh code chéo trội |
-| 26 | 24302442 | Trần Anh Dũng | Tạo repo + README + Jacobi |
+| 26 | 243024442 | Trần Anh Dũng | Tạo repo + README + Jacobi |
 | 27 | 243030546 | Phạm Tiến Phát | Slide + bài tập ứng dụng |
 | 28 | 243030531 | Nguyễn Hữu Khánh | Thuyết trình + bài tập ứng dụng |
 | 29 | 243030526 | Trần Đình Hiệu | Chéo trội |
