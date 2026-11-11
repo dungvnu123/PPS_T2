@@ -16,7 +16,7 @@ Bộ notebook giải hệ phương trình tuyến tính, hợp nhất từ các 
 
 ## Các phần chương trình
 
-- `Gau-Jacobi/`: Jacobi và Gauss–Seidel. `Jacobi_v1.ipynb` và `gauss_seidel.ipynb` chạy theo số bước lặp; các bản `_v2` dừng theo sai số. Hai notebook `test_jacobi.ipynb`, `test_gauss_seidel.ipynb` chứa kiểm thử.
+- `Gau-Jacobi/`: Jacobi và Gauss–Seidel. `Jacobi_v1.ipynb` và `gauss_seidel_v1.ipynb` nhận `(A, b, x0, eps, n_max)` và trả `(x, k, err)`; cả hai phiên bản dừng khi đạt sai số hoặc chạm giới hạn lặp. Hai notebook `test_jacobi.ipynb`, `test_gauss_seidel.ipynb` chứa kiểm thử.
 - `Kiem-tra-cheo-troi/kiemtracheotroiii.ipynb`: kiểm tra ma trận, hệ số co, chuẩn và bán kính phổ, kèm kiểm thử mới nhất của DinhHieu.
 - `Gradient-lien-hop/conjugate_gradient.ipynb`: phương pháp gradient liên hợp, tính định thức, ví dụ và kiểm thử của anth. Bổ sung `Gradient-lien-hop/conjugate_gradient_v2.ipynb` từ nhánh `anth`, gồm ví dụ nhóm 3 và 15 nhóm kiểm thử.
 - `Bai-toan-ung-dung/`: bài toán phân bố nhiệt độ trên tấm phẳng của TienPhat và HuuKhanh. `Lap-he.ipynb` lập hệ phương trình và tính nghiệm tham chiếu; `Jacobi.ipynb`, `Gauss-Seidel.ipynb` và `Conjugate_Gradient.ipynb` giải bằng ba phương pháp. `Giai_thich.ipynb` giải thích điều kiện hội tụ; `So-sanh-pp.md` chứa bảng so sánh các phương pháp.
@@ -31,6 +31,7 @@ File `pytest.ini` giữ cấu hình kiểm thử trong phạm vi dự án, trán
 - NumPy để tính toán ma trận.
 - JupyterLab và IPykernel để mở, chạy notebook.
 - NBConvert để kiểm tra thực thi toàn bộ notebook.
+- Matplotlib để vẽ biểu đồ trong `Gau-Jacobi/Thucnghiem.ipynb`.
 
 ## Cài đặt trên Windows (PowerShell)
 
