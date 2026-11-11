@@ -1,5 +1,16 @@
 # Kiểm tra và hợp nhất các nhánh — 11/11/2026
 
+## Cập nhật mới sau lần hợp nhất trước
+
+- Fetch lại `origin`: `DinhHieu` lên `9b6c4e6`, `NguyenBinh` lên `4be9ef6` (gồm `91df1af`). Các nhánh `TranLe`, `anth`, `TienPhat`, `HuuKhanh` không có commit mới ngoài `main`.
+- `DinhHieu` bổ sung hàm `lam_tron_6` trước ví dụ; phần mã này đã có trên `main`. Giữ bản hiện tại và ca kiểm thử thực sự không chéo trội nhưng hội tụ, tránh phục hồi ca kiểm thử cũ có mô tả sai.
+- `NguyenBinh` cập nhật chữ ký và ca biên trong hai notebook kiểm thử; các thay đổi tương đương đã có trên `main`. Giữ đủ năm hệ phương trình, gồm ví dụ 4.10 với epsilon `1e-4`, cùng các kiểm tra dữ liệu không hợp lệ và giới hạn bước lặp.
+- Nhận thay đổi notebook gradient liên hợp v2: bỏ ví dụ 4.10 trùng lặp, đổi epsilon ví dụ 4 × 4 thành `1e-5`. Sửa nhãn kích thước từ cấp 5 thành cấp 4, giữ assertion báo lỗi nếu kiểm thử thất bại và cập nhật đầu ra bằng lần chạy mới.
+- Chạy mới **4/4 notebook liên quan** trên bản sao tạm, với kernel `pps-t2` và cấu hình `pytest.ini` của dự án: Jacobi **24/24 ca**, Gauss–Seidel **24/24 ca**, kiểm tra ma trận **18/18 nhóm**, gradient liên hợp v2 **15/15 nhóm** đều đạt. Đây là kiểm tra bổ sung; kết quả 15 notebook bên dưới thuộc lần hợp nhất trước.
+- Giữ nguyên các file chưa được theo dõi trong workspace và cấu hình Notebook editor.
+
+## Lần hợp nhất trước
+
 Đã fetch từ `origin`, rà soát các thay đổi chưa có trên `main` và chạy toàn bộ 15 notebook bằng kernel Python của `.venv`, từ bản sao tạm với đầu ra mới. Không dùng đầu ra đã lưu để kết luận kiểm thử.
 
 | Nhánh thành viên | Commit được kiểm tra | Kết quả |
